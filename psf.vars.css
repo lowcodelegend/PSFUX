@@ -73,6 +73,8 @@ body.theme-entry .psf,
     --input-rounding: 5px;
     --button-background-color: #E00800;
     --button-text-color: #ffffff;
+    --button-border-color: #E00800;
+    --button-rounding: 5px;
 }
 
 .mobile .theme-entry.psf,

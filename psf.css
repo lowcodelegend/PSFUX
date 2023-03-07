@@ -359,6 +359,9 @@
     content: 'attachment';
 }
 
+.theme-entry a.SourceCode-Forms-Controls-Web-Button {
+    height: 4rem;
+}
 
 /* KPIs */
 
