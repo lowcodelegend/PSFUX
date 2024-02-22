@@ -153,6 +153,10 @@ renderSlider = () => {
         }
     });
     $('span.tab-text').click(() => slider.slideReveal("hide"));
+
+    //iOS click bug hack
+    const myTabs = document.body.querySelectorAll('span.tab-text')
+    myTabs.forEach( t => {t.addEventListener('touchend', e => {t.closest('a').click(); console.log('clicking ' + t.innerText)})});
 }
 
 renderDrawer = () => {
