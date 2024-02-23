@@ -128,7 +128,7 @@ renderMobileHeader = () => {
 
 //using sidr
 function renderSlider() {
-    $("#sidebar").css("display", "none");
+    //$("#sidebar").css("display", "none");
     var imageHtmlCollapsed = '<span class="material-symbols-outlined">menu</span>';
     var imageHtmlExpanded = '<span class="material-symbols-outlined">menu_open</span>';
     var sidebarToggle = $("#sidebar-handler");
@@ -160,7 +160,6 @@ function renderSlider() {
             sidebarToggle.html(imageHtmlCollapsed);
             sidebarToggle.removeClass('expanded');
             $("#sidebar").css("display", "none");
-
             $("#sidebar").removeClass("left-shadow-overlay");
         }
     });
