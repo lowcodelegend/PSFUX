@@ -144,7 +144,7 @@ function renderSlider() {
     sidebarToggle.sidr({
         name: 'sidebar', // This should match the ID of the sidebar
         side: 'left', // Position of the sidebar
-        source: '#sidebar', // The source of the sidebar content
+        source: '#sidebar, #sidebar-handler', // The source of the sidebar content
         renaming: false, // Sidr will not rename your classes and ids
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
