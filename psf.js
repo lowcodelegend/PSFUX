@@ -171,6 +171,7 @@ function renderSlider() {
 
     // Handling the case when you want to close Sidr programmatically
     $('span.tab-text').click(function() {
+        console.log('tab clicked');
         $.sidr('close', 'sidebar');
     });
 
@@ -179,6 +180,7 @@ function renderSlider() {
         console.log('clicked burger')
         $.sidr('toggle', 'sidebar');
     });
+
 }
 
 /* jquery slidereveal - doesn't work with iphone
