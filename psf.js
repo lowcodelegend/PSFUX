@@ -149,11 +149,13 @@ function renderSlider() {
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
         onOpen: function() {
+            console.log('sidebar open callback');
             sidebarToggle.html(imageHtmlExpanded);
             sidebarToggle.addClass('expanded');
             $("#sidebar").addClass("left-shadow-overlay");
         },
         onClose: function() {
+            console.log('sidebar close callback');
             sidebarToggle.html(imageHtmlCollapsed);
             sidebarToggle.removeClass('expanded');
             $("#sidebar").removeClass("left-shadow-overlay");
