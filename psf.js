@@ -137,7 +137,7 @@ renderSlider = () => {
         push: false,
         position: "left",
         width: "70%",
-        overlay: true,
+        overlay: false,
         overlayColor: "transparent",
         trigger: $("#sidebar-handler"),
         // trigger: $("#sbm4k2-dev-sidebar-handler"),
