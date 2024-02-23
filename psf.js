@@ -176,6 +176,7 @@ function renderSlider() {
     // Toggling Sidr on clicking the handler
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')
+        $("#sidebar").css("display", "none");
         //$.sidr('toggle', 'sidebar');
     });
     
