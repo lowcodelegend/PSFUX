@@ -147,10 +147,11 @@
     color: var(--sidebar-background-color);
 }
 
+/* Removeing for absolute positioned burger
 .mobile .theme-entry.psf div.sidebar-handler.expanded>span {
     color: var(--form-background-color);
 }
-
+*/
 
 /* sidebar */
 
