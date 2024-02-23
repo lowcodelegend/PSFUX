@@ -152,12 +152,15 @@ function renderSlider() {
             console.log('sidebar open callback');
             sidebarToggle.html(imageHtmlExpanded);
             sidebarToggle.addClass('expanded');
+            $("#sidebar").css("display", "grid");
             $("#sidebar").addClass("left-shadow-overlay");
         },
         onClose: function() {
             console.log('sidebar close callback');
             sidebarToggle.html(imageHtmlCollapsed);
             sidebarToggle.removeClass('expanded');
+            $("#sidebar").css("display", "none");
+
             $("#sidebar").removeClass("left-shadow-overlay");
         }
     });
