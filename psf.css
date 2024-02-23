@@ -125,7 +125,7 @@
 
 .mobile .theme-entry.psf div.sidebar-handler {
     padding: 0px;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: var(--drawer-handler-width);
