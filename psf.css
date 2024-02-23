@@ -133,7 +133,7 @@
     height: 100px;
     display: table;
     height: 65px;
-    z-index: 2000;
+    z-index: 1000000;
 }
 
 .mobile .theme-entry.psf div.sidebar-handler>span {
