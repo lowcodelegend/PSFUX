@@ -171,13 +171,14 @@ function renderSlider() {
         console.log('tab clicked');
         $.sidr('close', 'sidebar');
     });
-
+    
+    */
     // Toggling Sidr on clicking the handler
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')
-        $.sidr('toggle', 'sidebar');
+        //$.sidr('toggle', 'sidebar');
     });
-    */
+    
 }
 
 /* jquery slidereveal - doesn't work with iphone
