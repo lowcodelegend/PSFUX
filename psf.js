@@ -150,23 +150,18 @@ function renderSlider() {
         displace: true, // Displace the body content or not
         onOpen: function() {
             console.log('sidebar open callback');
-            sidebarToggle.html(imageHtmlExpanded);
-            sidebarToggle.addClass('expanded');
+            //sidebarToggle.html(imageHtmlExpanded);
+            //sidebarToggle.addClass('expanded');
             $("#sidebar").css("display", "grid");
             $("#sidebar").addClass("left-shadow-overlay");
-
-            sidebarToggle.click(function() {
-                console.log('clicked burger')
-                $.sidr('toggle', 'sidebar');
-            });
         },
         onClose: function() {
             console.log('sidebar close callback');
-            sidebarToggle.html(imageHtmlCollapsed);
-            sidebarToggle.removeClass('expanded');
+            //sidebarToggle.html(imageHtmlCollapsed);
+            //sidebarToggle.removeClass('expanded');
             $("#sidebar").css("display", "none");
             $("#sidebar").removeClass("left-shadow-overlay");
-            
+
             sidebarToggle.click(function() {
                 console.log('clicked burger')
                 $.sidr('toggle', 'sidebar');
