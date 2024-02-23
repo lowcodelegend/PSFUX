@@ -127,6 +127,52 @@ renderMobileHeader = () => {
     });
 }
 
+//using sidr
+function renderSlider() {
+    var imageHtmlCollapsed = '<span class="material-symbols-outlined">menu</span>';
+    var imageHtmlExpanded = '<span class="material-symbols-outlined">menu_open</span>';
+    var sidebarToggle = $("#sidebar-handler");
+
+    // Check if the sidebar handler exists, if not, create it
+    if (sidebarToggle.length === 0) {
+        var html = '<div id="sidebar-handler" class="sidebar-handler">' + imageHtmlCollapsed + '</div>';
+        $("#sidebar").before(html);
+        sidebarToggle = $("#sidebar-handler"); // Re-assign to the newly created element
+    }
+
+    // Initialize Sidr
+    sidebarToggle.sidr({
+        name: 'sidebar', // This should match the ID of the sidebar
+        side: 'left', // Position of the sidebar
+        source: '#sidebar', // The source of the sidebar content
+        renaming: false, // Sidr will not rename your classes and ids
+        body: 'body', // Where the sidr will push the content
+        displace: true, // Displace the body content or not
+        onOpen: function() {
+            sidebarToggle.html(imageHtmlExpanded);
+            sidebarToggle.addClass('expanded');
+            $("#sidebar").addClass("left-shadow-overlay");
+        },
+        onClose: function() {
+            sidebarToggle.html(imageHtmlCollapsed);
+            sidebarToggle.removeClass('expanded');
+            $("#sidebar").removeClass("left-shadow-overlay");
+        }
+    });
+
+    // Handling the case when you want to close Sidr programmatically
+    $('span.tab-text').click(function() {
+        $.sidr('close', 'sidebar');
+    });
+
+    // Toggling Sidr on clicking the handler
+    sidebarToggle.click(function() {
+        $.sidr('toggle', 'sidebar');
+    });
+}
+
+/* jquery slidereveal - doesn't work with iphone
+
 renderSlider = () => {
     var imageHtmlCollapsed = '<span class="material-symbols-outlined">menu</span>';
     var imageHtmlExpanded = '<span class="material-symbols-outlined">menu_open</span>';
@@ -158,6 +204,8 @@ renderSlider = () => {
     const myTabs = document.body.querySelectorAll('span.tab-text')
     myTabs.forEach( t => {t.addEventListener('touchend', e => {t.closest('a').click(); console.log('clicking ' + t.innerText)})});
 }
+
+*/
 
 renderDrawer = () => {
     renderSidebar();
