@@ -166,14 +166,17 @@ function renderSlider() {
             $("#sidebar").removeClass("left-shadow-overlay");
         }
     });
+    */
     
-    // Handling the case when you want to close Sidr programmatically
+    
+    //Close on tab click
     $('span.tab-text').click(function() {
         console.log('tab clicked');
-        $.sidr('close', 'sidebar');
+        $("#sidebar").css("display", "none");
+        $("#sidebar").removeClass("left-shadow-overlay");
     });
     
-    */
+    
     // forget sidr
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')

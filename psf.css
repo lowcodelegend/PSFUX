@@ -133,7 +133,7 @@
     height: 100px;
     display: table;
     height: 65px;
-    z-index: 1000000;
+    z-index: 10001;
 }
 
 .mobile .theme-entry.psf div.sidebar-handler>span {
@@ -181,6 +181,7 @@
     padding-top: 20px;
     max-width: 250px;
     min-width: 200px;
+    z-index: 10000;
 }
 
 .theme-entry.psf div.sidebar ul.tab-box-tabs>li>a.tab {
