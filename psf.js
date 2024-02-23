@@ -149,6 +149,7 @@ function renderSlider() {
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
         method: 'toggle', //sidebar handle is a toggle
+        bind: 'click',
         onOpen: function() {
             console.log('sidebar open callback');
             //sidebarToggle.html(imageHtmlExpanded);
