@@ -145,7 +145,7 @@ function renderSlider() {
         name: 'sidebar', // This should match the ID of the sidebar
         side: 'left', // Position of the sidebar
         source: '#sidebar', // The source of the sidebar content
-        renaming: false, // Sidr will not rename your classes and ids
+        renaming: true, // Sidr will not rename your classes and ids
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
         onOpen: function() {
@@ -167,13 +167,13 @@ function renderSlider() {
     // Handling the case when you want to close Sidr programmatically
     $('span.tab-text').click(function() {
         console.log('tab clicked');
-        $.sidr('close', 'sidebar');
+        $.sidr('close', '#sidebar');
     });
 
     // Toggling Sidr on clicking the handler
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')
-        $.sidr('toggle', 'sidebar');
+        $.sidr('toggle', '#sidebar');
     });
 
 }
