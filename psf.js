@@ -128,7 +128,7 @@ renderMobileHeader = () => {
 
 //using sidr
 function renderSlider() {
-    //$("#sidebar").css("display", "none");
+    
     var imageHtmlCollapsed = '<span class="material-symbols-outlined">menu</span>';
     var imageHtmlExpanded = '<span class="material-symbols-outlined">menu_open</span>';
     var sidebarToggle = $("#sidebar-handler");
@@ -144,7 +144,7 @@ function renderSlider() {
     sidebarToggle.sidr({
         name: 'sidebar', // This should match the ID of the sidebar
         side: 'left', // Position of the sidebar
-        source: '#sidebar, #sidebar-handler', // The source of the sidebar content
+        source: '#sidebar', // The source of the sidebar content
         renaming: false, // Sidr will not rename your classes and ids
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
@@ -154,6 +154,11 @@ function renderSlider() {
             sidebarToggle.addClass('expanded');
             $("#sidebar").css("display", "grid");
             $("#sidebar").addClass("left-shadow-overlay");
+
+            sidebarToggle.click(function() {
+                console.log('clicked burger')
+                $.sidr('toggle', 'sidebar');
+            });
         },
         onClose: function() {
             console.log('sidebar close callback');
@@ -161,6 +166,11 @@ function renderSlider() {
             sidebarToggle.removeClass('expanded');
             $("#sidebar").css("display", "none");
             $("#sidebar").removeClass("left-shadow-overlay");
+            
+            sidebarToggle.click(function() {
+                console.log('clicked burger')
+                $.sidr('toggle', 'sidebar');
+            });
         }
     });
 
