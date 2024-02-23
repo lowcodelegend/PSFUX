@@ -161,11 +161,6 @@ function renderSlider() {
             //sidebarToggle.removeClass('expanded');
             $("#sidebar").css("display", "none");
             $("#sidebar").removeClass("left-shadow-overlay");
-
-            sidebarToggle.click(function() {
-                console.log('clicked burger')
-                $.sidr('toggle', 'sidebar');
-            });
         }
     });
 
@@ -176,7 +171,7 @@ function renderSlider() {
     });
 
     // Toggling Sidr on clicking the handler
-    sidebarToggle.click(function() {
+    $('#sidebar-handler').click(function() {
         console.log('clicked burger')
         $.sidr('toggle', 'sidebar');
     });
