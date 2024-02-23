@@ -128,6 +128,7 @@ renderMobileHeader = () => {
 
 //using sidr
 function renderSlider() {
+    $("#sidebar").css("display", "none");
     var imageHtmlCollapsed = '<span class="material-symbols-outlined">menu</span>';
     var imageHtmlExpanded = '<span class="material-symbols-outlined">menu_open</span>';
     var sidebarToggle = $("#sidebar-handler");
