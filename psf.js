@@ -145,25 +145,25 @@ function renderSlider() {
         name: 'sidebar', // This should match the ID of the sidebar
         side: 'left', // Position of the sidebar
         source: '#sidebar', // The source of the sidebar content
-        renaming: true, // Sidr will not rename your classes and ids
+        renaming: false, // Sidr will not rename your classes and ids
         body: 'body', // Where the sidr will push the content
         displace: true, // Displace the body content or not
         onOpen: function() {
             console.log('sidebar open callback');
             //sidebarToggle.html(imageHtmlExpanded);
             //sidebarToggle.addClass('expanded');
-            $("#sidebar").css("display", "grid");
-            $("#sidebar").addClass("left-shadow-overlay");
+            //$("#sidebar").css("display", "grid");
+            //$("#sidebar").addClass("left-shadow-overlay");
         },
         onClose: function() {
             console.log('sidebar close callback');
             //sidebarToggle.html(imageHtmlCollapsed);
             //sidebarToggle.removeClass('expanded');
-            $("#sidebar").css("display", "none");
-            $("#sidebar").removeClass("left-shadow-overlay");
+            //$("#sidebar").css("display", "none");
+            //$("#sidebar").removeClass("left-shadow-overlay");
         }
     });
-
+    /*
     // Handling the case when you want to close Sidr programmatically
     $('span.tab-text').click(function() {
         console.log('tab clicked');
@@ -175,7 +175,7 @@ function renderSlider() {
         console.log('clicked burger')
         $.sidr('toggle', 'sidebar');
     });
-
+    */
 }
 
 /* jquery slidereveal - doesn't work with iphone
