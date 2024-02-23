@@ -140,6 +140,7 @@ function renderSlider() {
         sidebarToggle = $("#sidebar-handler"); // Re-assign to the newly created element
     }
 
+    /*
     // Initialize Sidr
     sidebarToggle.sidr({
         name: 'sidebar', // This should match the ID of the sidebar
@@ -165,7 +166,7 @@ function renderSlider() {
             $("#sidebar").removeClass("left-shadow-overlay");
         }
     });
-    /*
+    
     // Handling the case when you want to close Sidr programmatically
     $('span.tab-text').click(function() {
         console.log('tab clicked');
@@ -173,11 +174,19 @@ function renderSlider() {
     });
     
     */
-    // Toggling Sidr on clicking the handler
+    // forget sidr
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')
-        $("#sidebar").css("display", "none");
-        //$.sidr('toggle', 'sidebar');
+        if($("#sidebar").css("display") === "none"){
+            $("#sidebar").css("display", "grid");
+            $("#sidebar").addClass("left-shadow-overlay");
+        }
+        else
+        {
+            $("#sidebar").css("display", "none");
+            $("#sidebar").removeClass("left-shadow-overlay");
+        }
+
     });
     
 }
