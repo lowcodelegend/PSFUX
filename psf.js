@@ -167,13 +167,13 @@ function renderSlider() {
     // Handling the case when you want to close Sidr programmatically
     $('span.tab-text').click(function() {
         console.log('tab clicked');
-        $.sidr('close', '#sidebar');
+        $.sidr('close', 'sidebar');
     });
 
     // Toggling Sidr on clicking the handler
     $('#sidebar-handler').click(function() {
         console.log('clicked burger')
-        $.sidr('toggle', '#sidebar');
+        $.sidr('toggle', 'sidebar');
     });
 
 }
