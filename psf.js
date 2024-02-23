@@ -134,10 +134,10 @@ renderSlider = () => {
     var html = '<div id="sidebar-handler" class="sidebar-handler">' + imageHtmlCollapsed + '</div>'
     sidebar.append(html)
     var slider = $("#sidebar").slideReveal({
-        push: false,
+        push: true,
         position: "left",
         width: "70%",
-        overlay: false,
+        overlay: true,
         overlayColor: "transparent",
         trigger: $("#sidebar-handler"),
         // trigger: $("#sbm4k2-dev-sidebar-handler"),
